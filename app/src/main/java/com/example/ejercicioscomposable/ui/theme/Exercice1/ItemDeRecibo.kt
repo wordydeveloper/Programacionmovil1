@@ -1,4 +1,4 @@
-package com.example.ejercicioscomposable.ui.theme.Exercice
+package com.example.ejercicioscomposable.ui.theme.Exercice1
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

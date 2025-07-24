@@ -1,4 +1,4 @@
-package com.example.ejercicioscomposable.ui.theme.Exercice
+package com.example.ejercicioscomposable.ui.theme.Exercice1
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
