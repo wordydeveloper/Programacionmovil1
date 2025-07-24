@@ -1,0 +1,56 @@
+package com.example.ejercicioscomposable.Exercice2
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+
+@Composable
+fun ListaDeTareas() {
+    var nuevaTarea by remember { mutableStateOf("") }
+    val tareas = remember { mutableStateListOf<String>() }
+
+    Column(modifier = Modifier.padding(16.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            TextField(
+                value = nuevaTarea,
+                onValueChange = { nuevaTarea = it },
+                label = { Text("Nueva tarea") },
+                modifier = Modifier.weight(1f)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            Button(onClick = {
+                if (nuevaTarea.isNotBlank()) {
+                    tareas.add(nuevaTarea)
+                    nuevaTarea = ""
+                }
+            }) {
+                Text("Añadir")
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        LazyColumn {
+            items(tareas) { tarea ->
+                Text(text = tarea, modifier = Modifier.padding(vertical = 4.dp))
+            }
+        }
+    }
+}

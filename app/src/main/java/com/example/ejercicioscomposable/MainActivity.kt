@@ -13,8 +13,10 @@ import androidx.compose.ui.Modifier
 import com.example.ejercicioscomposable.Exercice2.AppDeSaludos
 import com.example.ejercicioscomposable.Exercice2.CambiadorDeColor
 import com.example.ejercicioscomposable.Exercice2.ContadorDeClics2
+import com.example.ejercicioscomposable.Exercice2.EditorDeTextoConContador
 import com.example.ejercicioscomposable.Exercice2.EspejoDeTexto
 import com.example.ejercicioscomposable.Exercice2.FormularioSimple
+import com.example.ejercicioscomposable.Exercice2.ListaDeTareas
 import com.example.ejercicioscomposable.Exercice2.MensajeSecreto
 import com.example.ejercicioscomposable.Exercice2.TarjetaExpandible
 import com.example.ejercicioscomposable.ui.theme.EjerciciosComposableTheme
@@ -86,7 +88,9 @@ class MainActivity : ComponentActivity() {
                    // ejercicio 5 ContadorDeClics2
                     // ejercicio 6   CambiadorDeColor()
                      // ejercicio 7 FormularioSimple()
-                    TarjetaExpandible()
+                   // ejercicio 8 TarjetaExpandible()
+                     // ejercicio 9 ListaDeTareas()
+                    EditorDeTextoConContador()
                 }
 
          }
