@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.EjerciciosComposable" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Color de fondo del splash -->
+        <item name="android:windowSplashScreenBackground">#FFFFFF</item>
 
-    <style name="Theme.EjerciciosComposable" parent="android:Theme.Material.Light.NoActionBar" />
+        <!-- Imagen del splash: vector o PNG en drawable -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+
+        <!-- Sin círculo detrás del icono -->
+        <item name="android:windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+    </style>
 </resources>
